@@ -20,4 +20,8 @@ export class CampaignsComponent implements OnInit {
     console.log("deleting campaign");
   }
 
+  rowClick(){
+    console.log('hello there');
+  }
+
 }
