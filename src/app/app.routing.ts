@@ -12,6 +12,8 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import {AccountComponent} from './account/account.component';
+import { DisplayAdComponent } from './display-ad/display-ad.component';
+import { SerachAdComponent } from './serach-ad/serach-ad.component';
 
 const routes: Routes =[
     { path: 'dashboard',      component: HomeComponent },
@@ -23,7 +25,9 @@ const routes: Routes =[
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'account',        component: AccountComponent},
-      { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
+    { path: 'display-ad',        component: DisplayAdComponent},
+    { path: 'search-ad',        component: SerachAdComponent},
+    { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
