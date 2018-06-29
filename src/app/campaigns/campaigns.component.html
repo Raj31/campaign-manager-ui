@@ -2,18 +2,29 @@
   <div class="container-fluid">
       <div class="row">
           <div class="col-md-12">
-            <button class="btn btn-default" type="button" (click)="updateCampaign()" href="/updateCampaign">Add New Campaign</button>
+            <a href="/updateCampaign"><button class="btn btn-default" type="button" >Add New Campaign</button></a>
             <br/><br/>
             <div class="card">
                 <div class="header">
                     <h4 class="title">Campaigns</h4>
                 </div>
                 <div class="content">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Status
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#">Active</a></li>
+                      <li><a href="/campaigns">Inactive</a></li>
+                    </ul>
+                  </div>
                   <table class="table">
                       <thead>
                           <tr>
                             <th>Campaign Name</th>
                             <th>Campaign Type</th>
+                            <th>Advertiser</th>
                             <th></th>
                           </tr>
                         </thead>
@@ -21,11 +32,13 @@
                             <tr>
                               <td><a href="/updateCampaign" (click)="updateCampaign()">My Test Campaign</a></td>
                               <td>Display, Search</td>
+                              <td><a href="/updateCampaign" (click)="updateAdvertiser()">PaperJag</a></td>
                               <td><a href="/campaigns" (click)="deleteCampaign()"><i class="pe-7s-trash"></i></a></td>
                             </tr>
                             <tr>
                               <td><a href="/updateCampaign" (click)="updateCampaign()">Another Test Campaign</a></td>
                               <td>Display</td>
+                              <td><a href="/updateCampaign" (click)="updateAdvertiser()">PaperJag</a></td>
                               <td><a href="/campaigns" (click)="deleteCampaign()"><i class="pe-7s-trash"></i></a></td>
                             </tr>
                         </tbody>
