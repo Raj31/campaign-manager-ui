@@ -13,15 +13,12 @@ export class CampaignsComponent implements OnInit {
   }
 
   updateCampaign(){
-    console.log("updating campaign");
+    console.log("updating campaign...");
   }
 
   deleteCampaign(){
     console.log("deleting campaign");
   }
 
-  rowClick(){
-    console.log('hello there');
-  }
 
 }

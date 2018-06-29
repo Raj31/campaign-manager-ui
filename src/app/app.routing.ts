@@ -15,6 +15,7 @@ import {AccountComponent} from './account/account.component';
 import { DisplayAdComponent } from './display-ad/display-ad.component';
 import { SerachAdComponent } from './serach-ad/serach-ad.component';
 import { CampaignsComponent } from './campaigns/campaigns.component';
+import { UpdateCampaignComponent } from './update-campaign/update-campaign.component';
 
 const routes: Routes =[
     { path: 'dashboard',      component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Routes =[
     { path: 'display-ad',        component: DisplayAdComponent},
     { path: 'search-ad',        component: SerachAdComponent},
     { path: 'campaigns',        component: CampaignsComponent},
+    { path: 'updateCampaign',        component: UpdateCampaignComponent},
     { path: '',          redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 

@@ -25,6 +25,7 @@ import { AccountComponent } from './account/account.component';
 import { DisplayAdComponent } from './display-ad/display-ad.component';
 import { SerachAdComponent } from './serach-ad/serach-ad.component';
 import { CampaignsComponent } from './campaigns/campaigns.component';
+import { UpdateCampaignComponent } from './update-campaign/update-campaign.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { CampaignsComponent } from './campaigns/campaigns.component';
     AccountComponent,
     DisplayAdComponent,
     SerachAdComponent,
-    CampaignsComponent
+    CampaignsComponent,
+    UpdateCampaignComponent
 
   ],
   imports: [
