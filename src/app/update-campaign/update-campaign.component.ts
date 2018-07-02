@@ -12,4 +12,8 @@ export class UpdateCampaignComponent implements OnInit {
   ngOnInit() {
   }
 
+  updateCampaign(){
+    console.log('updating campaign...');
+  }
+
 }

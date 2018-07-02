@@ -1,3 +1,83 @@
-<p>
-  update-campaign works!
-</p>
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Add/Edit Campaign</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Campaign Name</label>
+                                        <input type="text" class="form-control" placeholder="Summer Sales Event" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Campaign Type</label>
+                                        <div>
+                                          <label>
+                                            <input type="checkbox" checked id="display"> Display
+                                          </label>
+                                        </div>
+                                        <div>
+                                          <label>
+                                            <input type="checkbox" checked id="search"> Search
+                                          </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Start Date</label>
+                                        <input type="date" class="form-control" value="" id="startdate">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>End Date</label>
+                                        <input type="date" class="form-control" value="" id="enddate">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Advertiser</label>
+                                        <div class="checkbox">
+                                          <select class="col-md-8 mdb-select colorful-select dropdown-primary" multiple searchable="Search here..">
+                                            <option value="" disabled selected>Select all Advertisers for Campaign</option>
+                                            <option value="1">ABC</option>
+                                            <option value="2">XYZ</option>
+                                            <option value="3">PQR</option>
+                                            <option value="4">STU</option>
+                                            <option value="5">WXY</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-8">
+
+                                    <button type="submit" class="btn btn-info btn-fill pull-right" (click)="updateCampaign()">Save Campaign</button>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
