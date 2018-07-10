@@ -7,40 +7,41 @@
             <div class="card">
                 <div class="header">
                     <h4 class="title">Campaigns</h4>
+                    <br/>
+                    <div class="dropdown">
+                      <select >
+                        <option selected><a href="#">Active</a></option>
+                        <option><a href="#">Inactive</a></option>
+                      </select>
+                    </div>
                 </div>
+
                 <div class="content">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      Status
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="#" >Active</a></li>
-                      <li><a href="/campaigns">Inactive</a></li>
-                    </ul>
-                  </div>
                   <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
                               <th>Campaign Name</th>
-                              <th>Campaign Type</th>
+                              <th>Advertisers</th>
                               <th>Start Date</th>
                               <th>End Date</th>
+                              <th>Advertisements</th>
                             </tr>
                           </thead>
                           <tbody>
                               <tr>
                                 <td><a href="/updateCampaign" (click)="updateCampaign()">My Test Campaign</a></td>
-                                <td>Display, Search</td>
+                                <td>7 Advertiser(s)</td>
                                 <td><a href="/updateCampaign" (click)="updateAdvertiser()">07/20/2018</a></td>
                                 <td><a href="/updateCampaign" (click)="updateAdvertiser()">07/20/2019</a></td>
+                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">5 Advertisement(s)</a></td>
                               </tr>
                               <tr>
                                 <td><a href="/updateCampaign" (click)="updateCampaign()">Another Test Campaign</a></td>
-                                <td>Display</td>
+                                <td>2 Advertiser(s)</td>
                                 <td><a href="/updateCampaign" (click)="updateAdvertiser()">08/20/2018</a></td>
                                 <td><a href="/updateCampaign" (click)="updateAdvertiser()">07/20/2019</a></td>
+                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">3 Advertisement(s)</a></td>
                               </tr>
                           </tbody>
                     </table>
