@@ -26,7 +26,6 @@ import { DisplayAdComponent } from './display-ad/display-ad.component';
 import { SerachAdComponent } from './serach-ad/serach-ad.component';
 import { CampaignsComponent } from './campaigns/campaigns.component';
 import { UpdateCampaignComponent } from './update-campaign/update-campaign.component';
-import { AdvertisersComponent } from './advertisers/advertisers.component';
 
 
 @NgModule({
@@ -44,9 +43,7 @@ import { AdvertisersComponent } from './advertisers/advertisers.component';
     DisplayAdComponent,
     SerachAdComponent,
     CampaignsComponent,
-    UpdateCampaignComponent,
-    AdvertisersComponent
-
+    UpdateCampaignComponent
   ],
   imports: [
     BrowserModule,

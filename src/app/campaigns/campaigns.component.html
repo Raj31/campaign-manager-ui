@@ -8,17 +8,19 @@
                 <div class="header">
                     <h4 class="title">Campaigns</h4>
                     <br/>
-                    <div class="dropdown">
-                      <select >
-                        <option selected><a href="#">Active</a></option>
-                        <option><a href="#">Inactive</a></option>
-                      </select>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-primary active" (click)="getCampaigns('active')">
+                        <input type="radio" name="options" id="active" autocomplete="off" checked> Active
+                      </label>
+                      <label class="btn btn-primary" (click)="getCampaigns('inactive')">
+                        <input type="radio" name="options" id="inactive" autocomplete="off"> Inactive
+                      </label>
                     </div>
                 </div>
 
                 <div class="content">
                   <div class="table-responsive">
-                    <table class="table">
+                    <table class="table table-hover">
                         <thead>
                             <tr>
                               <th>Campaign Name</th>
@@ -29,19 +31,12 @@
                             </tr>
                           </thead>
                           <tbody>
-                              <tr>
-                                <td><a href="/updateCampaign" (click)="updateCampaign()">My Test Campaign</a></td>
-                                <td>7 Advertiser(s)</td>
-                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">07/20/2018</a></td>
-                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">07/20/2019</a></td>
-                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">5 Advertisement(s)</a></td>
-                              </tr>
-                              <tr>
-                                <td><a href="/updateCampaign" (click)="updateCampaign()">Another Test Campaign</a></td>
-                                <td>2 Advertiser(s)</td>
-                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">08/20/2018</a></td>
-                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">07/20/2019</a></td>
-                                <td><a href="/updateCampaign" (click)="updateAdvertiser()">3 Advertisement(s)</a></td>
+                              <tr *ngFor="let x of campaigns" (click)="updateCampaign(x)">
+                                <td>{{x.campaignname}}</td>
+                                <td>{{x.advertiser.length}}</td>
+                                <td>{{x.startdate}}</td>
+                                <td>{{x.enddate}}</td>
+                                <td>5 Advertisement(s)</td>
                               </tr>
                           </tbody>
                     </table>
@@ -50,6 +45,7 @@
             </div>
           </div>
       </div>
+
   </div>
 </div>
 <style>
