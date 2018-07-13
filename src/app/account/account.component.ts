@@ -16,8 +16,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AccountComponent implements OnInit {
 baseAPIUrl:String;
-accounts:any[];
+public accounts:any[];
 public users:any[];
+accountId:string;
 accountName:String;
 accountPhone:String;
 accountAddress:String;
@@ -50,21 +51,33 @@ loginValue:any = {};
         console.log(response.json());
         this.accounts=response.json();
         this.users=this.accounts[0].users;
+        this.accountId = this.accounts[0]._id
         this.accountName = this.accounts[0].accountname;
-        this.accountPhone = "248-120-1200";
-        this.accountAddress = "32425 Grand River";
-        this.accountCity = "Novi";
-        this.accountState = "MI";
-        this.accountCountry = "USA";
-        this.accountZip = "48393";
+        this.accountPhone = this.accounts[0].phone;
+        this.accountAddress = this.accounts[0].address;
+        this.accountCity = this.accounts[0].city;
+        this.accountState = this.accounts[0].state;
+        this.accountCountry = this.accounts[0].country;
+        this.accountZip = this.accounts[0].zip;
         console.log(this.users);
         
       });
   }
 
-  updateUser(){
-    console.log("update user called....");
-    this.router.navigate(['user']);
+  addUpdateUser(action,userId){
+    console.log("addUpdateUser  called....");
+    console.log("Action is....",action);
+    console.log("account or userId passed....",userId);
+    if(action=="add"){
+      this.router.navigate(['user'], { queryParams: { action: action,accountid:this.accountId,userid:'' } });
+    }else if(action=="update"){
+      this.router.navigate(['user'], { queryParams: { action: action,accountid:this.accountId,userid:userId } });
+    }
+    
+  }
+
+  deleteUser(userId){
+    console.log('Code to be written for making user inactive');
   }
 }
 /*

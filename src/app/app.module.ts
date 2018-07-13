@@ -21,6 +21,7 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { AccountComponent } from './account/account.component';
+import { FinanceComponent } from './finance/finance.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AccountComponent } from './account/account.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    AccountComponent
+    AccountComponent,
+    FinanceComponent
 
   ],
   imports: [
