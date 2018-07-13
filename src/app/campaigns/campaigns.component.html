@@ -1,0 +1,68 @@
+<div class="main-content" >
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+            <a href="/updateCampaign"><button class="btn btn-default" type="button" >Add New Campaign</button></a>
+            <br/><br/>
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Campaigns</h4>
+                    <br/>
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-primary active" (click)="getCampaigns('active')">
+                        <input type="radio" name="options" id="active" autocomplete="off" checked> Active
+                      </label>
+                      <label class="btn btn-primary" (click)="getCampaigns('inactive')">
+                        <input type="radio" name="options" id="inactive" autocomplete="off"> Inactive
+                      </label>
+                    </div>
+                </div>
+
+                <div class="content">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                              <th>Campaign Name</th>
+                              <th>Advertisers</th>
+                              <th>Start Date</th>
+                              <th>End Date</th>
+                              <th>Advertisements</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let x of campaigns" (click)="updateCampaign(x)">
+                                <td>{{x.campaignname}}</td>
+                                <td>{{x.advertiser.length}}</td>
+                                <td>{{x.startdate}}</td>
+                                <td>{{x.enddate}}</td>
+                                <td>5 Advertisement(s)</td>
+                              </tr>
+                          </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+
+  </div>
+</div>
+<style>
+  .fade-scale {
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+  }
+
+  .fade-scale.in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

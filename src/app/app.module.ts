@@ -9,6 +9,7 @@ import { NavbarModule } from './shared/navbar/navbar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { LbdModule } from './lbd/lbd.module';
+import { ImageUploadModule } from "angular2-image-upload";
 
 import { AppComponent } from './app.component';
 
@@ -22,6 +23,11 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { AccountComponent } from './account/account.component';
 import { FinanceComponent } from './finance/finance.component';
+import { DisplayAdComponent } from './display-ad/display-ad.component';
+import { SerachAdComponent } from './serach-ad/serach-ad.component';
+import { CampaignsComponent } from './campaigns/campaigns.component';
+import { UpdateCampaignComponent } from './update-campaign/update-campaign.component';
+
 
 @NgModule({
   declarations: [
@@ -35,8 +41,11 @@ import { FinanceComponent } from './finance/finance.component';
     NotificationsComponent,
     UpgradeComponent,
     AccountComponent,
-    FinanceComponent
-
+    FinanceComponent,
+    DisplayAdComponent,
+    SerachAdComponent,
+    CampaignsComponent,
+    UpdateCampaignComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +56,7 @@ import { FinanceComponent } from './finance/finance.component';
     SidebarModule,
     RouterModule,
     AppRoutingModule,
+    ImageUploadModule.forRoot(),
     LbdModule
   ],
   providers: [],
